@@ -77,7 +77,7 @@ module.exports = msgHandler = async (client, message) => {
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
                 const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                 client.sendImageAsSticker(from, imageBase64).then(() => {
-                    client.reply(from, 'Here\'s your sticker')
+                    client.reply(from, '*Pesan Ini Dibuat Oleh Bot*\n\nUdah Jadi Nih kak ^_^\n\nJangan Lupa Share https:\/\/wa.me\/62895369940595 agar teman kakak bisa merasakan bot yang saya buat\n\nMakasih kak\n\nNote: Jangan DiReply Karena Pesan Ini dibuat oleh bot\n- Bot Rizki Ganteng')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 })
             } else if (args[0] === 'nobg') {
@@ -90,7 +90,7 @@ module.exports = msgHandler = async (client, message) => {
                 if (!is.Url(url)) { await client.reply(from, 'Maaf, link yang kamu kirim tidak valid. [Invalid Link]', id) }
                 client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
                     ? client.sendText(from, 'Maaf, link yang kamu kirim tidak memuat gambar. [No Image]')
-                    : client.reply(from, 'Here\'s your sticker')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
+                    : client.reply(from, '*Pesan Ini Dibuat Oleh Bot*\n\nUdah Jadi Nih kak ^_^\n\nJangan Lupa Share https:\/\/wa.me\/62895369940595 agar teman kakak bisa merasakan bot yang saya buat\n\nMakasih kak\n\nNote: Jangan DiReply Karena Pesan Ini dibuat oleh bot\n- Bot Rizki Ganteng')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
                 await client.reply(from, 'Tidak ada gambar! Untuk membuka daftar perintah kirim #menu [Wrong Format]', id)
             }
@@ -107,7 +107,7 @@ module.exports = msgHandler = async (client, message) => {
                 const giphyCode = getGiphyCode[0].replace(/[-\/]/gi, '')
                 const smallGifUrl = 'https://media.giphy.com/media/' + giphyCode + '/giphy-downsized.gif'
                 client.sendGiphyAsSticker(from, smallGifUrl).then(() => {
-                    client.reply(from, 'Here\'s your sticker')
+                    client.reply(from, '*Pesan Ini Dibuat Oleh Bot*\n\nUdah Jadi Nih kak ^_^\n\nJangan Lupa Share https:\/\/wa.me\/62895369940595 agar teman kakak bisa merasakan bot yang saya buat\n\nMakasih kak\n\nNote: Jangan DiReply Karena Pesan Ini dibuat oleh bot\n- Bot Rizki Ganteng')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 }).catch((err) => console.log(err))
             } else if (is.MediaGiphy(url)) {
@@ -115,7 +115,7 @@ module.exports = msgHandler = async (client, message) => {
                 if (!gifUrl) { return client.reply(from, 'Gagal mengambil kode giphy', id) }
                 const smallGifUrl = url.replace(gifUrl[0], 'giphy-downsized.gif')
                 client.sendGiphyAsSticker(from, smallGifUrl).then(() => {
-                    client.reply(from, 'Here\'s your sticker')
+                    client.reply(from, '*Pesan Ini Dibuat Oleh Bot*\n\nUdah Jadi Nih kak ^_^\n\nJangan Lupa Share https:\/\/wa.me\/62895369940595 agar teman kakak bisa merasakan bot yang saya buat\n\nMakasih kak\n\nNote: Jangan DiReply Karena Pesan Ini dibuat oleh bot\n- Bot Rizki Ganteng')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 }).catch((err) => console.log(err))
             } else {
